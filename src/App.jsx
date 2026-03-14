@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Container from './components/container/container';
 import { Header } from './components/Header/Header';
+import { Main } from './components/Main/Main';
 
 function App() {
   const [isDark, setIsDark] = useState(() => {
@@ -38,6 +39,7 @@ function App() {
         >
           <Container>
             <Header isDark={isDark} setIsDark={setIsDark}/>
+            <Main />
           </Container>
         </div>
   )
