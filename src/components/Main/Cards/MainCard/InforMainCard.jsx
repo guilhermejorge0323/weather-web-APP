@@ -4,7 +4,7 @@ import { DetailsMainCard } from "./DetailsMainCard"
 
 export const InfoMainCard = () => {
     return (
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div className="flex gap-6 items-center">
                 {WeatherVariants['Clear'].icon}
                 <div className="">
