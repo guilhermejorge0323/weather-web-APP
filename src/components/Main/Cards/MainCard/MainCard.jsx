@@ -6,10 +6,12 @@ import { TitleMainCard } from "./TittleMainCard"
 
 export const MainCard = () => {
     return (
-        <Card>
-            <TitleMainCard />
-            <InfoMainCard />
-            <SunriseDetails />
-        </Card>
+        <div className="mb-6">
+            <Card>
+                <TitleMainCard />
+                <InfoMainCard />
+                <SunriseDetails />
+            </Card>
+        </div>
     )
 }
