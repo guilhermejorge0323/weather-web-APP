@@ -17,13 +17,15 @@ export const CardPerHours = () => {
     ];
 
     return (
-        <Card>
-            <TitleCardPredictions>Previsão por Hora</TitleCardPredictions>
-            <div className="flex gap-4 overflow-x-auto pb-2">
-                {hourlyDataMock.map((item) => {
-                    return <CardInfoHours key={item.dt} hours={item.dt_txt} icon={weatherIcon[`${item.weather[0].main}`].icon} temp={item.main.temp}/>
-                })}
-            </div>
-        </Card>
+        <div className="mb-6">
+            <Card>
+                <TitleCardPredictions>Previsão por Hora</TitleCardPredictions>
+                <div className="flex gap-4 overflow-x-auto pb-2">
+                    {hourlyDataMock.map((item) => {
+                        return <CardInfoHours key={item.dt} hours={item.dt_txt} icon={weatherIcon[`${item.weather[0].main}`].icon} temp={item.main.temp}/>
+                    })}
+                </div>
+            </Card>
+        </div>
     )
 }

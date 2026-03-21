@@ -23,7 +23,9 @@ function App() {
 
   return (
         <div className="
-          w-screen
+          p-4
+          md:p-8
+          w-full
           min-h-screen
           dark:bg-gradient-to-br
         dark:from-slate-900
