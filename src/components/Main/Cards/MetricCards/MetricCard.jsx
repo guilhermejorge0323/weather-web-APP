@@ -32,7 +32,7 @@ export const MetricCard = ({ icon, label, value, type }) => {
         <Card>
             <div className="max-h-[110px] min-h-[110px]">
                 <div className="flex gap-4 mb-4">
-                    <div className={`p-3  rounded-full ${getBgIcon()}`}>
+                    <div className={`p-3  rounded-full ${getBgIcon()}`} style={{ width: "48px", height: "48px" }}>
                         {icon}
                     </div>
                     <div>
