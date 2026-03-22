@@ -1,4 +1,3 @@
-import { Sun } from "lucide-react"
 import { Card } from "../../Card"
 import { TitleCardPredictions } from "../TittleCardPredictions"
 import { CardInfoHours } from "./CardInfoHours"

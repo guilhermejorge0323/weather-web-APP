@@ -10,7 +10,6 @@ export const Main = () => {
             <MetricCards />
             <CardPerHours />
             <CardPerDay />
-            
         </main>
     )
 }
