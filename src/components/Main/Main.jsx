@@ -8,9 +8,9 @@ export const Main = ({ data }) => {
     return (
         <main>
             <MainCard data={data}/>
-            <MetricCards />
-            <CardPerHours />
-            <CardPerDay />
+            <MetricCards data={data} />
+            <CardPerHours data={data}/>
+            <CardPerDay data={data}/>
         </main>
     )
 }
