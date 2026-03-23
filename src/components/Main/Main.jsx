@@ -3,14 +3,14 @@ import { MainCard } from "./Cards/MainCard/MainCard"
 import { MetricCards } from "./Cards/MetricCards/MetricCards"
 import { CardPerDay } from "./Cards/Predictions/CardPerDay/CardPerDay"
 
-export const Main = () => {
+export const Main = ({ data }) => {
+
     return (
         <main>
-            <MainCard />
-            <MetricCards />
-            <CardPerHours />
-            <CardPerDay />
-            
+            <MainCard data={data}/>
+            <MetricCards data={data} />
+            <CardPerHours data={data}/>
+            <CardPerDay data={data}/>
         </main>
     )
 }
