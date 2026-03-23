@@ -6,9 +6,9 @@ const fetchFullWeatherData = async (lat, lon, cityName, state) => {
     try {
 
         const [weatherRes, forecastRes, airRes] = await Promise.all([
-            fetch(`${BASE_URL}/weather?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=93b3e742a35584af9b86b3e512461b73`),
-            fetch(`${BASE_URL}/forecast?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=93b3e742a35584af9b86b3e512461b73`),
-            fetch(`${BASE_URL}/air_pollution?lat=${lat}&lon=${lon}&appid=93b3e742a35584af9b86b3e512461b73`)
+            fetch(`${BASE_URL}/weather?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=${API_KEY}`),
+            fetch(`${BASE_URL}/forecast?lat=${lat}&lon=${lon}&units=metric&lang=pt_br&appid=${API_KEY}`),
+            fetch(`${BASE_URL}/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`)
         ]);
 
         const weatherData = await weatherRes.json();
@@ -34,7 +34,7 @@ const fetchFullWeatherData = async (lat, lon, cityName, state) => {
 // 1. Busca por nome da cidade (Input do Header)
 export const searchWeather = async (city) => {
     try {
-        const geoRes = await fetch(`${GEO_URL}/direct?q=${city}&limit=1&appid=93b3e742a35584af9b86b3e512461b73`);
+        const geoRes = await fetch(`${GEO_URL}/direct?q=${city}&limit=1&appid=${API_KEY}`);
         const geoData = await geoRes.json();
 
         if (!geoData || geoData.length === 0) return null;
@@ -51,7 +51,7 @@ export const searchWeather = async (city) => {
 export const searchWeatherByCords = async (lat, lon) => {
     try {
         // Primeiro descobrimos o nome da cidade/estado via Reverse Geocoding
-        const geoRes = await fetch(`${GEO_URL}/reverse?lat=${lat}&lon=${lon}&limit=1&appid=93b3e742a35584af9b86b3e512461b73`);
+        const geoRes = await fetch(`${GEO_URL}/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${API_KEY}`);
         const geoData = await geoRes.json();
 
         const cityName = geoData[0]?.name || "";
