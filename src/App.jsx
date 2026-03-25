@@ -10,7 +10,6 @@ function App() {
   const [dataWeather, setDataWeather] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // 1. Função de processar (Simples, sem useCallback para não complicar)
   const handleWeatherData = (data) => {
     if (data) {
       setDataWeather(data);
@@ -19,11 +18,18 @@ function App() {
     setLoading(false);
   }
 
-  // 2. Busca via input
+
   const onSearchCity = async (city) => {
     setLoading(true);
     const data = await searchWeather(city);
-    handleWeatherData(data);
+
+    if (data) {
+      handleWeatherData(data);
+    }else {
+      alert("Cidade não encontrada! Verifique o nome e tente novamente.");
+    }
+
+    setLoading(false);
   }
 
   useEffect(() => {
@@ -83,7 +89,7 @@ function App() {
           "
         >
           <Container>
-              <Header isDark={isDark} setIsDark={setIsDark}/>
+              <Header isDark={isDark} setIsDark={setIsDark} onSearch={onSearchCity}/>
               {loading ? (
                   <div className="flex flex-col items-center justify-center h-64 text-blue-900 dark:text-sky-100">
                     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-current mb-4"></div>
