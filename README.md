@@ -57,7 +57,7 @@ Este projeto contou com a colaboração estratégica do **Gemini** (IA da Google
 3.  **Configure as Variáveis de Ambiente:**
     Crie um arquivo chamado `.env` na raiz do projeto e adicione sua chave:
     ```env
-    VITE_API_KEY=93b3e742a35584af9b86b3e512461b73
+    VITE_API_KEY=[SUA CHAVE]
     ```
 
 4.  **Inicie o servidor:**
