@@ -1,16 +1,75 @@
-# React + Vite
+# ☁️ Weather Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um dashboard de clima moderno e responsivo desenvolvido com **React 19**, **Vite** e **Tailwind CSS**. O projeto consome a API da OpenWeather para fornecer dados em tempo real, previsões detalhadas e índices de qualidade do ar.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Demonstração Live
+Confira o projeto online e funcional:  
+👉 [https://guilhermejorge0323.github.io/weather-web-APP/](https://guilhermejorge0323.github.io/weather-web-APP/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎨 Design e Concepção
+O design deste projeto nasceu de uma abordagem inovadora utilizando **Inteligência Artificial**:
+1.  **Template Inicial:** Utilizei uma IA de geração de design para o **Figma** para criar o conceito visual e o layout dos cards.
+2.  **Desenvolvimento:** A partir desse template estático, desenvolvi toda a estrutura de componentes React, garantindo a fidelidade visual e a responsividade do dashboard.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🤖 AI-Assisted Development (Gemini)
+Este projeto contou com a colaboração estratégica do **Gemini** (IA da Google) como um parceiro de **Pair Programming**:
+- **Resolução de Erros Críticos:** Debugamos juntos erros de infraestrutura como *MIME type mismatch* e *Mixed Content* durante o deploy no GitHub Pages.
+- **Refatoração de Lógica:** Otimizamos a busca tripla de APIs (`weather`, `forecast`, `air_pollution`) usando `Promise.all`.
+- **Performance:** Implementamos uma estratégia de cache com `localStorage` para carregamento instantâneo.
+
+---
+
+## ✨ Funcionalidades e Observações Técnicas
+- 📍 **Geolocalização em Tempo Real:** Identifica sua cidade automaticamente ao abrir o app.
+- 🔍 **Busca Inteligente:** Pesquisa global por nome de cidade com tratamento de erros.
+- 📊 **Métricas Dinâmicas:** Temperatura, umidade, vento e **Qualidade do Air (AQI)** consumidos via API.
+- 📅 **Previsão de 5 Dias:** Visualização da evolução do clima ao longo da semana.
+- ⚠️ **Nota sobre o Índice UV:** Devido às limitações da versão gratuita da API utilizada, a métrica de **Índice UV** permanece como um elemento de interface estático, servindo como demonstração de layout para futuras expansões (ex: integração com One Call API).
+
+---
+
+## 🛠️ Tecnologias e Ferramentas
+- **Frontend:** [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
+- **Ícones:** [Lucide React](https://lucide.dev/)
+- **API:** [OpenWeatherMap API](https://openweathermap.org/api)
+
+---
+
+## ⚙️ Como Executar Localmente
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/guilhermejorge0323/weather-web-APP.git](https://github.com/guilhermejorge0323/weather-web-APP.git)
+    ```
+
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+
+3.  **Configure as Variáveis de Ambiente:**
+    Crie um arquivo chamado `.env` na raiz do projeto e adicione sua chave:
+    ```env
+    VITE_API_KEY=93b3e742a35584af9b86b3e512461b73
+    ```
+
+4.  **Inicie o servidor:**
+    ```bash
+    npm run dev
+    ```
+
+---
+
+## 👤 Autor
+**Guilherme Jorge** - *Software Developer & Tech Student*
+- **GitHub:** [@guilhermejorge0323](https://github.com/guilhermejorge0323)
+
+---
+*Este projeto demonstra a capacidade de integrar design gerado por IA com lógica de programação robusta e moderna.*
