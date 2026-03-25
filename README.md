@@ -21,7 +21,6 @@ O design deste projeto nasceu de uma abordagem inovadora utilizando **Inteligên
 Este projeto contou com a colaboração estratégica do **Gemini** (IA da Google) como um parceiro de **Pair Programming**:
 - **Resolução de Erros Críticos:** Debugamos juntos erros de infraestrutura como *MIME type mismatch* e *Mixed Content* durante o deploy no GitHub Pages.
 - **Refatoração de Lógica:** Otimizamos a busca tripla de APIs (`weather`, `forecast`, `air_pollution`) usando `Promise.all`.
-- **Performance:** Implementamos uma estratégia de cache com `localStorage` para carregamento instantâneo.
 
 ---
 
